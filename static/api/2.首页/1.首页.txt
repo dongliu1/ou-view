@@ -1,0 +1,19 @@
+1.用户登录
+测试账号:   18512340000
+测试密码:   123456
+url: /mng/login
+输入参数:
+phoneNum    string      必须        手机号(长度为11位的数字)
+password    string      必须        密码(长度为6-12位)
+返回值:
+mngId           int             用户id
+phoneNum        string          手机号
+realName        string          姓名
+headImg         string          头像地址
+token           string          用户token值
+communityId     int             小区id
+communityName   string          小区名字
+provinceName    string          省份
+cityName        string          城市
+districtName    string          区县
+address         string          地址

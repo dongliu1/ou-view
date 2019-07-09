@@ -1,0 +1,83 @@
+公告列表上面有[添加]按钮
+有条件检索:
+	[标题]搜索
+	[状态]选择
+	
+每一行上有操作列
+未发布状态:	[预览],[修改],[发布],[删除]
+已发布状态:	[预览],[取消发布]
+(预览的效果图可用参考前端的UI图)
+
+
+1.获取公告列表
+url: /notice/list
+输入参数:
+communityId     int     必须       	小区id
+start           int     必须       	开始位置
+num				int		必须		获取条数
+title			string	非必须		搜索标题
+state			int		非必须		搜索状态(0:未发布,1:已发布)
+返回值:
+noticeId		int             	公告id
+title			string				标题
+state			int					状态(0:未发布,1:已经发)
+publishTime		string				发布时间
+publishUserName	string				发布人
+pageViews		int					浏览量
+----------------------------------------------------
+
+2.新增公告
+url: /notice/add
+输入参数:
+communityId		int		必须		小区id
+title			string	必须		标题(长度2-40)
+content			string	必须		内容(不能为空)
+返回值:
+无
+----------------------------------------------------
+
+3.修改公告
+url: /notice/modify
+输入参数:
+noticeId		int		必须		公告id
+title			string	必须		标题(长度2-40)
+content			string	必须		内容(不能为空)
+返回值:
+无
+----------------------------------------------------
+
+4.删除公告
+url: /notice/delete
+输入参数:
+noticeId		int		必须		公告id
+返回值:
+无
+----------------------------------------------------
+
+5.发布公告
+url: /notice/publish
+输入参数:
+noticeId		int		必须		公告id
+返回值:
+无
+----------------------------------------------------
+
+6.取消发布
+url: /notice/unpublish
+输入参数:
+noticeId		int		必须		公告id
+返回值:
+无
+----------------------------------------------------
+
+7.获取公告详情(用于预览)
+url: /notice/detail
+输入参数:
+noticeId		int		必须		公告id
+返回值:
+noticeId		int             	公告id
+title			string				标题
+content			string				内容
+publishTime		string				发布时间(如果公告未发布,此处为当前时间)
+publishUserName	string				发布人(如果公告未发布,此处未创建人名字)
+pageViews		int					浏览量

@@ -1,0 +1,53 @@
+1.获取用户信息
+url: /mng/info
+输入参数:
+mngId       int      必须       用户id
+返回值:
+mngId           int             用户id
+phoneNum        string          手机号
+realName        string          姓名
+headImg         string          头像地址
+communityId     int             小区id
+communityName   string          小区名字
+provinceName    string          省份
+cityName        string          城市
+districtName    string          区县
+address         string          地址
+----------------------------------------------------
+
+2.修改用户头像
+url: /mng/modifyHeadImg
+输入参数:
+mngId       int      必须       用户id
+headImg     string   必须       用户头像url
+返回值:
+无
+----------------------------------------------------
+
+3.修改姓名
+url: /mng/modifyRealName
+输入参数:
+mngId       int      必须       用户id
+realName    string   必须       姓名(长度为2-20)
+返回值:
+无
+----------------------------------------------------
+
+4.修改手机号
+url: /mng/modifyPhoneNum
+输入参数:
+mngId       int     必须        用户id
+phoneNum    string  必须        手机号(长度为11位的数字)
+返回值:
+无
+----------------------------------------------------
+
+5.修改密码
+url: /mng/modifyPass
+输入参数:
+mngId       int     必须        用户id
+password    string  必须        原密码(长度6-12)
+newPass     string  必须        新密码(长度6-12)
+返回值:
+无
+----------------------------------------------------
