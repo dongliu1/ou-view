@@ -174,3 +174,6 @@
 .el-light-bdcolor-bottom{border-bottom:1px solid#909399!important;}
 .el-first-bdcolor-top{border-top:1px solid#DCDFE6!important;}
 .el-first-bdcolor-bottom{border-bottom:1px solid#DCDFE6!important;}
+
+.el-hr-dotted{border:none;border-top:1px dotted #aaa;}
+.el-hr-dashed{border:none;border-top:1px dashed #aaa;}

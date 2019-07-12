@@ -54,6 +54,26 @@ export default new Router({
         path: "/houseMessage",
         component: resolve =>
           require(["@/components/dataCenter/houseMessage.vue"], resolve)
+      },
+      {
+        path: "/houseManagement",
+        component: resolve =>
+          require(["@/components/dataCenter/houseManagement.vue"], resolve)
+      },
+      {
+        path: "/ownersManagement",
+        component: resolve =>
+          require(["@/components/dataCenter/ownersManagement.vue"], resolve)
+      },
+      {
+        path: "/residentsManagement",
+        component: resolve =>
+          require(["@/components/dataCenter/residentsManagement.vue"], resolve)
+      },
+      {
+        path: "/wordManagement",
+        component: resolve =>
+          require(["@/components/dataCenter/wordManagement.vue"], resolve)
       }]
     }
   ]

@@ -31,7 +31,7 @@
           :index="subItem.path"
           @click='routeNav(subItem.path,subItem.navIndex)'
         >{{ subItem.tit }}</el-menu-item>
-     
+
     </el-menu>
   </div>
 </template>
@@ -96,18 +96,22 @@ export default {
         },
         {
           tit: "房屋管理",
+          path:'/houseManagement',
           navIndex:3
         },
         {
           tit: "业主管理",
+          path:'/ownersManagement',
           navIndex:3
         },
         {
           tit: "住户管理",
+          path:'/residentsManagement',
           navIndex:3
         },
         {
           tit: "文档管理",
+          path:'/wordManagement',
           navIndex:3
         }
       ]
@@ -115,7 +119,7 @@ export default {
   },
   methods: {
     routeNav(_path,_navIndex){
-      this.$router.push({path:_path,query: { navIndex: _navIndex }}); 
+      this.$router.push({path:_path,query: { navIndex: _navIndex }});
     }
   },
   mounted() {
@@ -145,7 +149,3 @@ export default {
   border-right: 2px solid #1e88e5;
 }
 </style>
-
-
-
-
